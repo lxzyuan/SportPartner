@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView
+        android:id="@+id/showid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/heart_linechart"
+        android:layout_width="match_parent"
+        android:layout_below="@id/showid"
+        android:layout_height="250dp" >
+    </com.github.mikephil.charting.charts.LineChart>
+
+    <Button
+        android:id="@+id/heart_sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heart_linechart"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="消息提醒" />
+
+    <Button
+        android:id="@+id/heart_stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heart_linechart"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/heart_sendButton"
+        android:text="停止提醒" />
+
+    <TextView
+        android:id="@+id/step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/heart_sendButton"
+        android:layout_below="@+id/heart_sendButton"
+        android:text="步数："
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/showstep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heart_sendButton"
+        android:layout_toRightOf="@+id/step"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/kall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/step"
+        android:layout_below="@+id/step"
+        android:text="卡路里："
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/showkall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step"
+        android:layout_toRightOf="@+id/kall"
+        android:textSize="20dp" />
+
+</RelativeLayout>
